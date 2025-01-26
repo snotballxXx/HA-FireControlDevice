@@ -50,20 +50,34 @@ void IRSender::messageReceived(const String &topic, const String &payload)
     Serial.println(payload);
 
     if (payload == "1") 
-        IrSender.sendNEC(0x00, 0x81, 0);
+        IrSender.sendNEC(0x00, 0x81, 0);//POWER
 
     else if (payload == "2") 
-        IrSender.sendNEC(0x00, 0xD4, 0);
+        IrSender.sendNEC(0x00, 0xD4, 0);//HEAT
 
     else if (payload == "3") 
-        IrSender.sendNEC(0x00, 0x82, 0);
+        IrSender.sendNEC(0x00, 0x82, 0);//FLAME
 
     else if (payload == "4") 
-        IrSender.sendNEC(0x00, 0x95, 0);
+        IrSender.sendNEC(0x00, 0x95, 0);//TEMP+
 
     else if (payload == "5") 
-        IrSender.sendNEC(0x00, 0x94, 0);
+        IrSender.sendNEC(0x00, 0x94, 0);//TEMP-
 
+    else if (payload == "6") 
+        IrSender.sendNEC(0x00, 0x83, 0);//ECO
+
+    else if (payload == "7") 
+        IrSender.sendNEC(0x00, 0x96, 0);//BOOST
+
+    else if (payload == "8") 
+        IrSender.sendNEC(0x00, 0xC0, 0);//COLOR
+
+    else if (payload == "9") 
+        IrSender.sendNEC(0x00, 0x97, 0);//BRIGHTNESS
+
+    else if (payload == "10") 
+        IrSender.sendNEC(0x00, 0x80, 0);//TIMER
 }
 
 void IRSender::loop(unsigned long time)
