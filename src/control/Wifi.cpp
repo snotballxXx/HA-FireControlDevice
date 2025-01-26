@@ -24,5 +24,4 @@ void Wifi::setup()
 
 void Wifi::loop(unsigned long time)
 {
-
 }

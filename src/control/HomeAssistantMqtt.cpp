@@ -5,7 +5,7 @@
 #include "interfaces/IWifi.h"
 #include "interfaces/ITopicCallback.h"
 #include "../constants.h"
-#include "../utils/composeClientId.h"
+#include "../utils/Helpers.h"
 
 using namespace Control;
 
@@ -95,7 +95,7 @@ void HomeAssistantMqtt::setup()
   _client->setServer(MQTT_SERVER, 1883);
   _client->setCallback(callback, (void *)this);
 
-  _clientId = Utils::composeClientID();
+  _clientId = Utils::Helpers::composeClientID();
   _clientId.replace(':', '-');
 }
 

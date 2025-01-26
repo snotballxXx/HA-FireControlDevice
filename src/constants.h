@@ -11,6 +11,6 @@
 #define COMMAND_TOPIC       "home/{ID}/command"
 #define BASE_TOPIC          "home"
 #define SERIAL_BAUD_RATE     115200
-#define VERSION              "Version 1.0.1"
+#define VERSION              "Version 1.0.0 - FireControl"
 
 #endif  //!_CONSTANT_H_
